@@ -29,8 +29,10 @@ body {
     font-family: 'Cairo', 'Tajawal', sans-serif;
     background: var(--light-bg);
     color: var(--text-dark);
-    line-height: 1.6;
+    line-height: 1.8;
     font-weight: 400;
+    direction: rtl;
+    text-align: right;
 }
 
 a {
