@@ -24,9 +24,9 @@
                 <img src="assets/images/logo.png" alt="YAD Logo">
             </a>
 
-            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu">
-        ☰
-      </button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="فتح قائمة التنقل">
+                ☰
+            </button>
 
             <div class="collapse navbar-collapse justify-content-center" id="navMenu">
                 <ul class="navbar-nav gap-2 gap-lg-4">
@@ -36,9 +36,16 @@
                     <li class="nav-item"><a class="nav-link" href="about.html">عن الشركة</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
                 </ul>
+                <div class="d-lg-none nav-mobile-actions mt-4">
+                    <button class="btn btn-theme-toggle w-100" type="button" aria-label="تبديل الوضع">🌙</button>
+                    <a href="https://wa.me/970569040508" class="btn btn-whatsapp w-100">اطلب الآن</a>
+                </div>
             </div>
 
-            <a href="https://wa.me/970569040508" class="btn btn-main d-none d-lg-block">اطلب الآن</a>
+            <div class="nav-actions">
+                <button class="btn btn-theme-toggle d-none d-lg-inline-flex" type="button" aria-label="تبديل الوضع">🌙</button>
+                <a href="https://wa.me/970569040508" class="btn btn-whatsapp d-none d-lg-inline-flex">اطلب الآن</a>
+            </div>
 
         </div>
     </nav>
@@ -58,15 +65,15 @@
             <!-- WHO WE ARE -->
             <div class="about-content">
                 <div class="about-image">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="YAD Team" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80" alt="YAD Team" loading="lazy">
                 </div>
                 <div class="about-text">
-                    <h2>من نحن؟</h2>
+                    <h2>من نحن</h2>
                     <p>
-                        YAD Services هي منصة مريعة متخصصة في تقديم خدمات أكاديمية وطلابية عالية الجودة. نعمل مع العشرات من الطلاب بنجاح وبرضا لا يعرف حدوداً.
+                        YAD Services هي شركة خدمات أكاديمية محترفة تقدم حلولاً متكاملة للطلاب والباحثين. نحن نعمل بخبرة وسرعة لتلبية احتياجاتك بدقة واحتراف.
                     </p>
                     <p>
-                        فريقنا يتكون من خبراء ومتخصصين لهم سنوات من الخبرة في جميع ناحية العمل الأكاديميب.
+                        فريقنا يتكون من متخصصين في البرمجة، التصميم، البحث العلمي، التحرير، وإدارة المشاريع، مع التزام تام بالمواعيد والجودة.
                     </p>
                 </div>
             </div>
@@ -74,13 +81,13 @@
             <!-- OUR MISSION -->
             <div class="about-content mt-5">
                 <div class="about-text order-lg-2">
-                    <h2>رسالتنا</h2>
+                    <h2>رؤيتنا</h2>
                     <p>
-                        رسالتنا هي مساعدة الطلاب على تحققي أحلامهم الأكاديمية من خلال تقديم خدمات مؤثرة وعالية بجودة عالية. نؤمن أن بالعمل الجاد والالتزام، لا يوجد فشل.
+                        نسعى لأن نكون الخيار الأول للطلاب والطامحين للحصول على خدمات أكاديمية ذات طابع احترافي ومنظم، مع تجربة خدمة سلسة ودعم مستمر.
                     </p>
                 </div>
                 <div class="about-image order-lg-1">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135763.png" alt="Our Mission" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=900&q=80" alt="Our Mission" loading="lazy">
                 </div>
             </div>
 
@@ -90,37 +97,37 @@
     <!-- WHY CHOOSE US -->
     <section class="why-us">
         <div class="container">
-            <h2 class="section-title">__why Choose_Us">لماذا تختار YAD؟</h2>
+            <h2 class="section-title">لماذا تختار YAD؟</h2>
             <div class="why-us-grid">
                 <div class="why-us-card">
-                    <div class="why-us-card-icon">🌟</div>
-                    <h3>الخبرة</h3>
-                    <p>فريق متميز بسنوات من الخبرة العملية</p>
+                    <div class="why-us-card-icon"><i class="fas fa-award"></i></div>
+                    <h3>خبرة متخصصة</h3>
+                    <p>خبراء في الخدمات الأكاديمية والمشاريع التقنية مع نتائج موثوقة.</p>
                 </div>
                 <div class="why-us-card">
-                    <div class="why-us-card-icon">💯</div>
-                    <h3>الجودة</h3>
-                    <p>نضمن أعلى مستويات الجودة في كل عمل</p>
+                    <div class="why-us-card-icon"><i class="fas fa-star"></i></div>
+                    <h3>جودة مضمونة</h3>
+                    <p>معايير احترافية في كل عمل، من المحتوى إلى التسليم النهائي.</p>
                 </div>
                 <div class="why-us-card">
-                    <div class="why-us-card-icon">⏲️</div>
-                    <h3>الالتزام بالموعد</h3>
-                    <p>تسليم في الوقت المددت دون أي تأخير</p>
+                    <div class="why-us-card-icon"><i class="fas fa-clock"></i></div>
+                    <h3>التزام بالوقت</h3>
+                    <p>تسليم دقيق في الوقت المتفق عليه مع متابعة مستمرة.</p>
                 </div>
                 <div class="why-us-card">
-                    <div class="why-us-card-icon">📈</div>
-                    <h3>الأسعار المنافسة</h3>
-                    <p>أسعار عادلة ومناسبة للالباب</p>
+                    <div class="why-us-card-icon"><i class="fas fa-hand-holding-usd"></i></div>
+                    <h3>أسعار عادلة</h3>
+                    <p>خطط تسعير شفافة تتناسب مع احتياجاتك وميزانيتك.</p>
                 </div>
                 <div class="why-us-card">
-                    <div class="why-us-card-icon">👥</div>
-                    <h3>الدعم 24/7</h3>
-                    <p>تواصل مستمر ورد سريع على استفساراتك</p>
+                    <div class="why-us-card-icon"><i class="fas fa-headset"></i></div>
+                    <h3>دعم مستمر</h3>
+                    <p>متابعة دائمة واستجابة سريعة لجميع استفساراتك.</p>
                 </div>
                 <div class="why-us-card">
-                    <div class="why-us-card-icon">🚠</div>
-                    <h3>الاحترافية</h3>
-                    <p>تعامل احترافي وسرية ويقظ بالخصوصية</p>
+                    <div class="why-us-card-icon"><i class="fas fa-lock"></i></div>
+                    <h3>سرية كاملة</h3>
+                    <p>نحافظ على خصوصيتك وسرية المعلومات في كل مشروع.</p>
                 </div>
             </div>
         </div>
@@ -137,9 +144,9 @@
                     انضم إلينا الآن وابدأ رحلتك نحو النجاح
                 </p>
 
-                <a href="https://wa.me/970569040508?text=مرحبا%20أنا%20مهتم%20بالعمل%20معكم" class="btn btn-main">
-          ابدأ الآن
-        </a>
+                <a href="https://wa.me/970569040508?text=مرحبا%20أنا%20مهتم%20بالعمل%20معكم" class="btn btn-whatsapp">
+                    ابدأ الآن
+                </a>
 
             </div>
         </div>
@@ -182,14 +189,15 @@
                     <h4>تواصل معنا</h4>
                     <p>
                         <strong>واتسآب:</strong> <a href="https://wa.me/970569040508">+970 569 040 508</a><br>
-                        <strong>البريد:</strong> <a href="mailto:info@yad.ps">info@yad.ps</a>
+                        <strong>إنستغرام:</strong> <a href="https://instagram.com/yad.services">@yad.services</a><br>
+                        <strong>البريد:</strong> <a href="mailto:yad.educational@gmail.com">yad.educational@gmail.com</a>
                     </p>
                 </div>
 
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2024 YAD Services. جميع الحقوق محفوظة.</p>
+                <p>&copy; 2026 YAD Services. جميع الحقوق محفوظة.</p>
             </div>
 
         </div>

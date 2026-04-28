@@ -24,9 +24,9 @@
                 <img src="assets/images/logo.png" alt="YAD Logo">
             </a>
 
-            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu">
-        ☰
-      </button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="فتح قائمة التنقل">
+                ☰
+            </button>
 
             <div class="collapse navbar-collapse justify-content-center" id="navMenu">
                 <ul class="navbar-nav gap-2 gap-lg-4">
@@ -36,9 +36,16 @@
                     <li class="nav-item"><a class="nav-link" href="about.html">عن الشركة</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
                 </ul>
+                <div class="d-lg-none nav-mobile-actions mt-4">
+                    <button class="btn btn-theme-toggle w-100" type="button" aria-label="تبديل الوضع">🌙</button>
+                    <a href="https://wa.me/970569040508" class="btn btn-whatsapp w-100">اطلب الآن</a>
+                </div>
             </div>
 
-            <a href="https://wa.me/970569040508" class="btn btn-main d-none d-lg-block">اطلب الآن</a>
+            <div class="nav-actions">
+                <button class="btn btn-theme-toggle d-none d-lg-inline-flex" type="button" aria-label="تبديل الوضع">🌙</button>
+                <a href="https://wa.me/970569040508" class="btn btn-whatsapp d-none d-lg-inline-flex">اطلب الآن</a>
+            </div>
 
         </div>
     </nav>
@@ -57,17 +64,15 @@
 
             <div class="contact-description">
                 <p>
-                    هل يا من الدرر الأكاديمية؟ هل تبحث عن مساعدة برالمشاريع؟ اتاصل معنا الآن عبر الطرق المزعومة أدناه واحصل على سڑتبا سريعة.
+                    تواصل معنا بسهولة وسرعة للحصول على استشارة كاملة وخدمة احترافية تناسب احتياجاتك الأكاديمية.
                 </p>
             </div>
 
             <!-- MAIN CTA -->
             <div class="contact-method">
-                <h3>🗣 جربة مباشرة ليزيرتر عبر واتسآب</h3>
-                <p>الطريقة الأسرع للتواصل معنا - اضغط على الزرار بالأسفل</p>
-                <a href="https://wa.me/970569040508?text=مرحبا%20YAD%20أحتاج%20إلى%20خدمة" class="btn btn-main btn-lg">
-          فتح واتسآب مباشرة
-        </a>
+                <h3>تواصل سريع عبر واتسآب</h3>
+                <p>الطريقة الأسرع للحصول على رد فوري وعرض سعر مخصص لخدمتك.</p>
+                <a href="https://wa.me/970569040508?text=مرحبا%20YAD" class="btn btn-whatsapp">افتح واتسآب مباشرة</a>
             </div>
 
             <!-- CONTACT INFO GRID -->
@@ -79,9 +84,15 @@
                 </div>
 
                 <div class="contact-info-item">
-                    <div class="contact-info-item-icon">✍️</div>
+                    <div class="contact-info-item-icon">✉️</div>
                     <h4>البريد الإلكتروني</h4>
-                    <p><a href="mailto:info@yad.ps">info@yad.ps</a></p>
+                    <p><a href="mailto:yad.educational@gmail.com">yad.educational@gmail.com</a></p>
+                </div>
+
+                <div class="contact-info-item">
+                    <div class="contact-info-item-icon">📸</div>
+                    <h4>انستغرام</h4>
+                    <p><a href="https://instagram.com/yad.services">@yad.services</a></p>
                 </div>
 
                 <div class="contact-info-item">
@@ -104,20 +115,20 @@
                     <div class="accordion-item faq-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                كم يمكنني بدء مشروعإ
-              </button>
+                                كم يمكنني بدء مشروعإ
+                            </button>
                         </h2>
                         <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                             <div class="accordion-body">
-                                ابدأ بالتواصل معنا عبر الواتسآب وراسل لنا بالمفاهيم الخاصة بت.
+                                ارسل لنا تفاصيل المشروع أو الخدمة التي تحتاجها وسنرد عليك بخطوات التنفيذ وسعر مخصص.
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item faq-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                ما هي الأسعار؟
-              </button>
+                                ما هي الأسعار؟
+                            </button>
                         </h2>
                         <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                             <div class="accordion-body">
@@ -128,12 +139,12 @@
                     <div class="accordion-item faq-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                هل هناك أملافاتُ مجانية؟
-              </button>
+                                هل تتضمن الخدمة تعديلات مجانية؟
+                            </button>
                         </h2>
                         <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                             <div class="accordion-body">
-                                ٹعم نشمل تعديلات مجانية في الحعبالبطريقة المملوفة للحيتن برضاهم.
+                                نعم. نضمّن تعديلات مجانية ضمن نطاق العمل المتفق عليه لضمان رضاك التام.
                             </div>
                         </div>
                     </div>
@@ -153,9 +164,9 @@
                     اتر لنا رسالتك بالتفاصيل الكاملة وسنرد عليكا في أسرع وقت ممكن
                 </p>
 
-                <a href="https://wa.me/970569040508?text=مرحبا%20YAD" class="btn btn-main">
-          احدتبنا الآن
-        </a>
+                <a href="https://wa.me/970569040508?text=مرحبا%20YAD" class="btn btn-whatsapp">
+                    احدتبنا الآن
+                </a>
 
             </div>
         </div>
@@ -198,14 +209,15 @@
                     <h4>تواصل معنا</h4>
                     <p>
                         <strong>واتسآب:</strong> <a href="https://wa.me/970569040508">+970 569 040 508</a><br>
-                        <strong>البريد:</strong> <a href="mailto:info@yad.ps">info@yad.ps</a>
+                        <strong>إنستغرام:</strong> <a href="https://instagram.com/yad.services">@yad.services</a><br>
+                        <strong>البريد:</strong> <a href="mailto:yad.educational@gmail.com">yad.educational@gmail.com</a>
                     </p>
                 </div>
 
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2024 YAD Services. جميع الحقوق محفوظة.</p>
+                <p>&copy; 2026 YAD Services. جميع الحقوق محفوظة.</p>
             </div>
 
         </div>

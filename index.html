@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="YAD Services - منصة الخدمات الأكاديمية والطلابية الشاملة. حل مشاريع التخرج، الواجبات، الامتحانات، والتقارير بجودة عالية وأسعار مناسبة.">
-    <meta name="keywords" content="خدمات أكاديمية, مشاريع تخرج, واجبات دراسية, امتحانات, تقارير, سيرة ذاتية, تصميم مواقع, علاج نطق">
+    <meta name="keywords" content="خدمات أكاديمية, مشاريع تخرج, واجبات دراسية, امتحانات, تقارير, سيرة ذاتية, تصميم مواقع">
     <meta name="author" content="YAD Services">
     <meta name="robots" content="index, follow">
 
@@ -73,9 +73,9 @@
                 <img src="assets/images/logo.png" alt="YAD Logo">
             </a>
 
-            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="فتح قائمة التنقل">
-        ☰
-      </button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="فتح قائمة التنقل">
+                ☰
+            </button>
 
             <div class="collapse navbar-collapse justify-content-center" id="navMenu">
                 <ul class="navbar-nav gap-2 gap-lg-4">
@@ -85,9 +85,16 @@
                     <li class="nav-item"><a class="nav-link" href="about.html">عن الشركة</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
                 </ul>
+                <div class="d-lg-none nav-mobile-actions mt-4">
+                    <button class="btn btn-theme-toggle w-100" type="button" aria-label="تبديل الوضع">🌙</button>
+                    <a href="https://wa.me/970569040508?text=مرحبا%20أنا%20مهتم%20بخدمات%20YAD" class="btn btn-whatsapp w-100">اطلب الآن</a>
+                </div>
             </div>
 
-            <a href="https://wa.me/970569040508?text=مرحبا%20أنا%20مهتم%20بخدمات%20YAD" class="btn btn-main d-none d-lg-block">اطلب الآن</a>
+            <div class="nav-actions">
+                <button class="btn btn-theme-toggle d-none d-lg-inline-flex" type="button" aria-label="تبديل الوضع">🌙</button>
+                <a href="https://wa.me/970569040508?text=مرحبا%20أنا%20مهتم%20بخدمات%20YAD" class="btn btn-whatsapp d-none d-lg-inline-flex">اطلب الآن</a>
+            </div>
 
         </div>
     </nav>
@@ -97,21 +104,21 @@
         <div class="container">
             <div class="hero-content text-center">
 
-                <h1>مشروع التخرج يضغط عليك؟ 🎓<br>نحن نحله ليك</h1>
+                <h1>نجعل النجاح الأكاديمي واضحاً وقابلاً للتنفيذ</h1>
 
                 <p>
-                    مشاريع، واجبات، امتحانات، تقارير… كل شيء في مكان واحد. خدمات أكاديمية كاملة بجودة عالية وأسعار معقولة.
+                    خدمات أكاديمية متكاملة من مشاريع التخرج إلى التقارير والسير الذاتية، مع جودة احترافية وتسليم سريع.
                 </p>
 
                 <div class="hero-buttons mt-4 d-flex flex-column flex-sm-row gap-3 justify-content-center">
 
-                    <a href="https://wa.me/970569040508?text=مرحبا%20بدي%20استفسر%20عن%20خدماتكم" class="btn btn-main" aria-label="طلب خدمة عبر واتس آب">
+                    <a href="https://wa.me/970569040508?text=مرحبا%20بدي%20استفسر%20عن%20خدماتكم" class="btn btn-whatsapp" aria-label="طلب خدمة عبر واتس آب">
                         <i class="fab fa-whatsapp"></i>اطلب الآن عبر واتس
                     </a>
 
                     <a href="services.html" class="btn btn-secondary" aria-label="عرض جميع الخدمات">
-            شاهد جميع الخدمات
-          </a>
+                        شاهد جميع الخدمات
+                    </a>
 
                 </div>
 
@@ -123,7 +130,7 @@
     <section class="services-section">
         <div class="container">
 
-            <h2 class="section-title">✨ الخدمات التي تحتاجها</h2>
+            <h2 class="section-title">الخدمات التي تحتاجها</h2>
 
             <div class="row g-4 mt-5">
 
@@ -132,7 +139,7 @@
                         <div class="service-card">
                             <div class="service-card-icon"><i class="fas fa-graduation-cap"></i></div>
                             <h3>مشاريع التخرج</h3>
-                            <p>مشروعات برمجية والهندسة مع تميم عملي كامل وتوثيق دقيق. نضمن برامج حديثة ومشاريع مرالقة دراسيا بأشرط رفيعة.
+                            <p>تنفيذ مشاريع تخرج احترافية مع توثيق كامل، تصميم حديث، ودعم فني يضمن تميز المشروع دراسياً.
                             </p>
                             <span class="service-card-link">اطلب الآن ←</span>
                         </div>
@@ -144,7 +151,7 @@
                         <div class="service-card">
                             <div class="service-card-icon"><i class="fas fa-tasks"></i></div>
                             <h3>الواجبات والتكاليف</h3>
-                            <p>حلول دقيقة لواجباتك الدراسية مع شرح مَلبٍا وشمول. سواء رياضيات، برمجة، أو علوم، نحلها الآن.</p>
+                            <p>حل واجبات دراسية دقيقة مع شرح واضح وتنسيق احترافي لكل المواد والمستويات.</p>
                             <span class="service-card-link">اطلب الآن ←</span>
                         </div>
                     </a>
@@ -155,7 +162,7 @@
                         <div class="service-card">
                             <div class="service-card-icon"><i class="fas fa-file-alt"></i></div>
                             <h3>حل الامتحانات</h3>
-                            <p>حلول إمتحانات بجودة عالية وسرية تامة. نوفر كل أنواع الامتحانات: أوراقية، أونلاين، أو بيانية.</p>
+                            <p>حلول محترفة للامتحانات وأنظمة التقييم، مع السرية الكاملة والتسليم داخل المواعيد.</p>
                             <span class="service-card-link">اطلب الآن ←</span>
                         </div>
                     </a>
@@ -166,7 +173,7 @@
                         <div class="service-card">
                             <div class="service-card-icon"><i class="fas fa-chart-bar"></i></div>
                             <h3>التقارير والبحوث</h3>
-                            <p>بحوث وتقارير أكاديمية مع محتوى أصلي وتوثيق سليم. معايير عالمية وخطوط مرجعية صحيحة.</p>
+                            <p>بحوث أكاديمية وتقارير احترافية مع محتوى أصلي وتوثيق دقيق يناسب معايير الجامعات.</p>
                             <span class="service-card-link">اطلب الآن ←</span>
                         </div>
                     </a>
@@ -177,7 +184,7 @@
                         <div class="service-card">
                             <div class="service-card-icon"><i class="fas fa-user-tie"></i></div>
                             <h3>السيرة الذاتية</h3>
-                            <p>سيرة ذاتية احترافية تجذب الانتباه وتزيد فرصك الوظيفية. تصميم عصري وممل وسهل القراءة.</p>
+                            <p>سيرة ذاتية احترافية تبرز نقاط قوتك وتجذب انتباه أصحاب العمل وتزيد فرص القبول.</p>
                             <span class="service-card-link">اطلب الآن ←</span>
                         </div>
                     </a>
@@ -188,8 +195,8 @@
                         <div class="service-card">
                             <div class="service-card-icon"><i class="fas fa-globe"></i></div>
                             <h3>تصميم المواقع</h3>
-                            <p>مواقع متجاوبة سريعة الحمل واحترافية. متخصصون في تصميم مواقع تسويقية وتطبيقات ويب.
-                                <span class="service-card-link">اطلب الآن ←</span>
+                            <p>مواقع إلكترونية متجاوبة وسريعة الأداء، مع تجربة مستخدم سلسة وتصميم عصري.</p>
+                            <span class="service-card-link">اطلب الآن ←</span>
                         </div>
                     </a>
                 </div>
@@ -199,8 +206,9 @@
                         <div class="service-card">
                             <div class="service-card-icon"><i class="fas fa-file-word"></i></div>
                             <h3>أعمال المكتب</h3>
-                            <p>حارف Excel و Word و PowerPoint. نتولى كل أعمال المكتب من تفريغ البيانات إلى تنسيق المستندات.
-                                <span class="service-card-link">اطلب الآن ←</span>
+                            <p>خدمات Excel وWord وPowerPoint دقيقة ومرتبة، من إدخال البيانات إلى إعداد العروض والتقارير.
+                            </p>
+                            <span class="service-card-link">اطلب الآن ←</span>
                         </div>
                     </a>
                 </div>
@@ -243,7 +251,7 @@
     <!-- TRUST SECTION -->
     <section class="trust-section">
         <div class="container">
-            <h2 class="section-title">✨ ليش تختارنا؟</h2>
+            <h2 class="section-title">ليش تختارنا؟</h2>
 
             <div class="row g-5">
                 <div class="col-md-6 col-lg-4">
@@ -308,9 +316,9 @@
                 <h3 style="color: #666; margin-bottom: 10px;">سيتم إضافة آراء طلابنا قريباً</h3>
                 <p style="color: #888; font-size: 16px;">نحن نعمل على جمع آراء طلابنا الفعليين. استخدم خدماتنا وشارك رأيك معنا!
                 </p>
-                <a href="https://wa.me/970569040508?text=أنا%20استخدمت%20الخدمة%20وأريد%20أن%20أشارك%20رأيي" class="btn btn-main mt-4">
-          شارك رأيك معنا
-        </a>
+                <a href="https://wa.me/970569040508?text=أنا%20استخدمت%20الخدمة%20وأريد%20أن%20أشارك%20رأيي" class="btn btn-whatsapp mt-4">
+                    شارك رأيك معنا
+                </a>
             </div>
 
         </div>
@@ -327,7 +335,7 @@
                     انضم لمئات الطلاب الذين حققوا أحلامهم معنا. ابدأ الآن!
                 </p>
 
-                <a href="https://wa.me/970569040508?text=مرحبا%20%F0%9F%91%8B%20بدي%20أستفسر%20عن%20الخدمات" class="btn btn-main" style="font-size: 18px; padding: 15px 40px;">
+                <a href="https://wa.me/970569040508?text=مرحبا%20%F0%9F%91%8B%20بدي%20أستفسر%20عن%20الخدمات" class="btn btn-whatsapp" style="font-size: 18px; padding: 15px 40px;">
                     <i class="fab fa-whatsapp" style="margin-left: 8px;"></i> اطلب الآن عبر واتساب
                 </a>
 
@@ -374,14 +382,15 @@
                     <h4>تواصل معنا</h4>
                     <p>
                         <strong>واتسآب:</strong> <a href="https://wa.me/970569040508">+970 569 040 508</a><br>
-                        <strong>البريد:</strong> <a href="mailto:info@yad.ps">info@yad.ps</a>
+                        <strong>إنستغرام:</strong> <a href="https://instagram.com/yad.services">@yad.services</a><br>
+                        <strong>البريد:</strong> <a href="mailto:yad.educational@gmail.com">yad.educational@gmail.com</a>
                     </p>
                 </div>
 
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2024 YAD Services. جميع الحقوق محفوظة.</p>
+                <p>&copy; 2026 YAD Services. جميع الحقوق محفوظة.</p>
             </div>
 
         </div>

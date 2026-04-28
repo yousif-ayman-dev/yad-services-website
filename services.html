@@ -24,9 +24,9 @@
                 <img src="assets/images/logo.png" alt="YAD Logo">
             </a>
 
-            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu">
-        ☰
-      </button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="فتح قائمة التنقل">
+                ☰
+            </button>
 
             <div class="collapse navbar-collapse justify-content-center" id="navMenu">
                 <ul class="navbar-nav gap-2 gap-lg-4">
@@ -36,9 +36,16 @@
                     <li class="nav-item"><a class="nav-link" href="about.html">عن الشركة</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
                 </ul>
+                <div class="d-lg-none nav-mobile-actions mt-4">
+                    <button class="btn btn-theme-toggle w-100" type="button" aria-label="تبديل الوضع">🌙</button>
+                    <a href="https://wa.me/970569040508?text=مرحبا%20أنا%20مهتم%20بخدمات%20YAD" class="btn btn-whatsapp w-100">اطلب الآن</a>
+                </div>
             </div>
 
-            <a href="https://wa.me/970569040508?text=مرحبا%20أنا%20مهتم%20بخدمات%20YAD" class="btn btn-main d-none d-lg-block">اطلب الآن</a>
+            <div class="nav-actions">
+                <button class="btn btn-theme-toggle d-none d-lg-inline-flex" type="button" aria-label="تبديل الوضع">🌙</button>
+                <a href="https://wa.me/970569040508?text=مرحبا%20أنا%20مهتم%20بخدمات%20YAD" class="btn btn-whatsapp d-none d-lg-inline-flex">اطلب الآن</a>
+            </div>
 
         </div>
     </nav>
@@ -46,7 +53,7 @@
     <!-- PAGE HERO -->
     <section class="hero services-hero">
         <div class="container">
-            <h1>✨ جميع الخدمات التي تحتاجها</h1>
+            <h1>جميع الخدمات التي تحتاجها</h1>
             <p class="mt-3">خدمات أكاديمية شاملة بجودة عالية وأسعار مناسبة. اختر ما تحتاج وابدأ الآن!</p>
         </div>
     </section>
@@ -67,16 +74,14 @@
 
             <!-- ALL SERVICES -->
             <div class="mb-5 pb-5">
-                <h2 class="section-title mb-5">🎯 اختر الخدمة التي تناسبك</h2>
-
+                <h2 class="section-title mb-5">اختر الخدمة التي تناسبك</h2>
                 <div class="services-grid">
 
                     <div class="service-detail-card">
                         <div class="service-detail-card-header"><i class="fas fa-graduation-cap"></i></div>
                         <div class="service-detail-card-body">
                             <h3>مشاريع التخرج</h3>
-                            <p>مشروعات برمجية والهندسة مع تميم عملي كامل وتوثيق دقيق. نضمن برامج حديثة ومشاريع مرالقة دراسيا بأشرط رفيعة.
-                            </p>
+                            <p>تنفيذ مشاريع تخرج احترافية مع توثيق كامل، تصميم حديث، ودعم فني يضمن التفوق الدراسي.</p>
                         </div>
                         <div class="service-detail-card-footer">
                             <a href="service-details.html?service=graduation">اطلب الآن ←</a>
@@ -87,7 +92,7 @@
                         <div class="service-detail-card-header"><i class="fas fa-tasks"></i></div>
                         <div class="service-detail-card-body">
                             <h3>الواجبات والتكاليف</h3>
-                            <p>حلول دقيقة لواجباتك الدراسية مع شرح مَلبٍا وشمول. سواء رياضيات، برمجة، أو علوم، نحلها الآن.</p>
+                            <p>حل واجبات دراسية دقيقة مع شرح واضح وتنسيق منظّم لكل المواد والمستويات.</p>
                         </div>
                         <div class="service-detail-card-footer">
                             <a href="service-details.html?service=assignments">اطلب الآن ←</a>
@@ -98,7 +103,7 @@
                         <div class="service-detail-card-header"><i class="fas fa-file-alt"></i></div>
                         <div class="service-detail-card-body">
                             <h3>حل الامتحانات</h3>
-                            <p>حلول إمتحانات بجودة عالية وسرية تامة. نوفر كل أنواع الامتحانات: أوراقية، أونلاين، أو بيانية.</p>
+                            <p>حلول احترافية للامتحانات والاختبارات مع حرص على السرية وجودة الأداء في جميع الصيغ.</p>
                         </div>
                         <div class="service-detail-card-footer">
                             <a href="service-details.html?service=exams">اطلب الآن ←</a>
@@ -109,7 +114,8 @@
                         <div class="service-detail-card-header"><i class="fas fa-chart-bar"></i></div>
                         <div class="service-detail-card-body">
                             <h3>التقارير والبحوث</h3>
-                            <p>بحوث وتقارير أكاديمية مع محتوى أصلي وتوثيق سليم. معايير عالمية وخطوط مرجعية صحيحة.</p>
+                            <p>بحوث وتقارير أكاديمية بمحتوى أصلي وتوثيق دقيق، مطابقة لمعايير الجامعات والمتطلبات العلمية.
+                            </p>
                         </div>
                         <div class="service-detail-card-footer">
                             <a href="service-details.html?service=reports">اطلب الآن ←</a>
@@ -120,7 +126,7 @@
                         <div class="service-detail-card-header"><i class="fas fa-user-tie"></i></div>
                         <div class="service-detail-card-body">
                             <h3>السيرة الذاتية</h3>
-                            <p>سيرة ذاتية احترافية تجذب الانتباه وتزيد فرصك الوظيفية. تصميم عصري وممل وسهل القراءة.</p>
+                            <p>سيرة ذاتية احترافية تبرز مهاراتك وخبراتك بأسلوب مرتب وجذاب لأصحاب العمل.</p>
                         </div>
                         <div class="service-detail-card-footer">
                             <a href="service-details.html?service=cv">اطلب الآن ←</a>
@@ -131,7 +137,7 @@
                         <div class="service-detail-card-header"><i class="fas fa-globe"></i></div>
                         <div class="service-detail-card-body">
                             <h3>تصميم المواقع</h3>
-                            <p>مواقع متجاوبة سريعة الحمل واحترافية. متخصصون في تصميم مواقع تسويقية وتطبيقات ويب.</p>
+                            <p>مواقع إلكترونية سريعة المتصفح، متجاوبة، ومصممة لتقديم تجربة مستخدم مميزة.</p>
                         </div>
                         <div class="service-detail-card-footer">
                             <a href="service-details.html?service=websites">اطلب الآن ←</a>
@@ -142,7 +148,8 @@
                         <div class="service-detail-card-header"><i class="fas fa-file-word"></i></div>
                         <div class="service-detail-card-body">
                             <h3>أعمال المكتب</h3>
-                            <p>حارف Excel و Word و PowerPoint. نتولى كل أعمال المكتب من تفريغ البيانات إلى تنسيق المستندات.</p>
+                            <p>خدمات مكتبية متكاملة من إدخال البيانات إلى تنسيق الأداء والتقارير في Word وExcel وPowerPoint.
+                            </p>
                         </div>
                         <div class="service-detail-card-footer">
                             <a href="service-details.html?service=office">اطلب الآن ←</a>
@@ -164,7 +171,7 @@
 
                 <p>لا تتردد! تواصل معنا الآن وابدأ بتحسين نتائجك الآن.</p>
 
-                <a href="https://wa.me/970569040508?text=مرحبا%20%F0%9F%91%8B%20بدي%20أستفسر%20عن%20الخدمات" class="btn btn-main">
+                <a href="https://wa.me/970569040508?text=مرحبا%20%F0%9F%91%8B%20بدي%20أستفسر%20عن%20الخدمات" class="btn btn-whatsapp">
                     <i class="fab fa-whatsapp"></i> تواصل معنا الآن
                 </a>
 
@@ -210,14 +217,15 @@
                     <h4>تواصل معنا</h4>
                     <p>
                         <strong>واتسآب:</strong> <a href="https://wa.me/970569040508">+970 569 040 508</a><br>
-                        <strong>البريد:</strong> <a href="mailto:info@yad.ps">info@yad.ps</a>
+                        <strong>إنستغرام:</strong> <a href="https://instagram.com/yad.services">@yad.services</a><br>
+                        <strong>البريد:</strong> <a href="mailto:yad.educational@gmail.com">yad.educational@gmail.com</a>
                     </p>
                 </div>
 
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2024 YAD Services. جميع الحقوق محفوظة.</p>
+                <p>&copy; 2026 YAD Services. جميع الحقوق محفوظة.</p>
             </div>
 
         </div>

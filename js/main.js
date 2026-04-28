@@ -39,6 +39,26 @@ function setActiveNavLink() {
 
 setActiveNavLink();
 
+const themeToggles = document.querySelectorAll('.btn-theme-toggle');
+const savedTheme = localStorage.getItem('yadTheme') || 'light';
+
+function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    themeToggles.forEach(toggle => {
+        toggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+    });
+}
+
+themeToggles.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+        const current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        applyTheme(current);
+        localStorage.setItem('yadTheme', current);
+    });
+});
+
+applyTheme(savedTheme);
+
 // ================================
 // SCROLL ANIMATIONS
 // ================================
@@ -202,31 +222,6 @@ forms.forEach(form => {
         }
     });
 });
-
-// ================================
-// DARK MODE TOGGLE (Optional)
-// ================================
-
-function initDarkMode() {
-    const darkModeButton = document.getElementById('darkModeToggle');
-    if (!darkModeButton) return;
-
-    const isDarkMode = localStorage.getItem('darkMode') === 'true';
-
-    if (isDarkMode) {
-        document.body.classList.add('dark-mode');
-        darkModeButton.textContent = '☀️';
-    }
-
-    darkModeButton.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-        const newDarkMode = document.body.classList.contains('dark-mode');
-        localStorage.setItem('darkMode', newDarkMode);
-        darkModeButton.textContent = newDarkMode ? '☀️' : '🌙';
-    });
-}
-
-initDarkMode();
 
 // ================================
 // WHATSAPP INTEGRATION

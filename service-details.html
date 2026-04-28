@@ -24,7 +24,7 @@
                 <img src="assets/images/logo.png" alt="YAD Logo">
             </a>
 
-            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="فتح قائمة التنقل">
                 ☰
             </button>
 
@@ -36,9 +36,16 @@
                     <li class="nav-item"><a class="nav-link" href="about.html">عن الشركة</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
                 </ul>
+                <div class="d-lg-none nav-mobile-actions mt-4">
+                    <button class="btn btn-theme-toggle w-100" type="button" aria-label="تبديل الوضع">🌙</button>
+                    <a href="https://wa.me/970569040508?text=مرحبا%20أنا%20مهتم%20بهذه%20الخدمة" class="btn btn-whatsapp w-100">اطلب الآن</a>
+                </div>
             </div>
 
-            <a href="https://wa.me/970569040508?text=أنا%20مهتم%20بهذه%20الخدمة" class="btn btn-main d-none d-lg-block">اطلب الآن</a>
+            <div class="nav-actions">
+                <button class="btn btn-theme-toggle d-none d-lg-inline-flex" type="button" aria-label="تبديل الوضع">🌙</button>
+                <a href="https://wa.me/970569040508?text=مرحبا%20أنا%20مهتم%20بهذه%20الخدمة" class="btn btn-whatsapp d-none d-lg-inline-flex">اطلب الآن</a>
+            </div>
 
         </div>
     </nav>
@@ -59,7 +66,7 @@
             <div class="details-section">
                 <h2>نبذة عن الخدمة</h2>
                 <p id="serviceDescription" class="lead">
-                    نقدم لك خدمة احترافية وعالية الجودة تم تصميمها خصيصاً لتلبية احتياجاتك الأكاديمية والمهنية.
+                    نقدم لك خدمة احترافية ومصممة بعناية لتلبية متطلباتك الأكاديمية والمهنية بدقة وجودة عالية.
                 </p>
             </div>
 
@@ -67,11 +74,11 @@
             <div class="details-section">
                 <h2>المميزات الرئيسية</h2>
                 <ul class="feature-list">
-                    <li id="feature1">✓ تنفيذ كامل للخدمة بجودة عالية</li>
-                    <li id="feature2">✓ تعديلات مجانية حسب متطلباتك</li>
-                    <li id="feature3">✓ دعم مستمر وتواصل سريع</li>
-                    <li id="feature4">✓ التزام بالمواعيد والجودة</li>
-                    <li id="feature5">✓ أسعار منافسة وعادلة</li>
+                    <li id="feature1">✓ تنفيذ كامل مع مراجعات دقيقة</li>
+                    <li id="feature2">✓ تعديلات مرنة بناءً على ملاحظاتك</li>
+                    <li id="feature3">✓ تواصل سريع ودعم شخصي</li>
+                    <li id="feature4">✓ التزام بالمواعيد وجودة متواصلة</li>
+                    <li id="feature5">✓ أسعار واضحة تناسب احتياجاتك</li>
                 </ul>
             </div>
 
@@ -79,9 +86,9 @@
             <div class="details-section">
                 <h2>الأسعار والباقات</h2>
                 <p>
-                    نقدم باقات مختلفة مناسبة لجميع الميزانيات والاحتياجات. تواصل معنا للحصول على عرض سعر مخصص.
+                    اختر باقة تناسبك أو تواصل معنا لتصميم عرض سعر مخصص حسب نطاق الخدمة ومواعيد التسليم.
                 </p>
-                <a href="https://wa.me/970569040508?text=أنا%20مهتم%20بعرض%20سعر" class="btn btn-main mt-3">
+                <a href="https://wa.me/970569040508?text=أنا%20مهتم%20بعرض%20سعر" class="btn btn-whatsapp mt-3">
                     اطلب عرض سعر
                 </a>
             </div>
@@ -90,9 +97,18 @@
             <div class="details-section">
                 <h2>نماذج من أعمالنا</h2>
                 <div class="service-portfolio">
-                    <div class="portfolio-item">📁</div>
-                    <div class="portfolio-item">📁</div>
-                    <div class="portfolio-item">📁</div>
+                    <div class="portfolio-item">
+                        <h3>تصميم تقرير أكاديمي</h3>
+                        <p>تنسيق احترافي ومحتوى مرتب</p>
+                    </div>
+                    <div class="portfolio-item">
+                        <h3>مشروع تخرج عملي</h3>
+                        <p>تسليم كامل مع توثيق وتقارير</p>
+                    </div>
+                    <div class="portfolio-item">
+                        <h3>سيرة ذاتية احترافية</h3>
+                        <p>تصميم جذاب يعزز فرصك</p>
+                    </div>
                 </div>
             </div>
 
@@ -100,7 +116,7 @@
             <div class="details-section text-center py-5">
                 <h2>هل أنت مستعد لطلب هذه الخدمة؟</h2>
                 <p class="mt-3 lead">تواصل معنا الآن عبر واتسآب واحصل على استشارة مجانية</p>
-                <a href="https://wa.me/970569040508?text=مرحبا%20أنا%20مهتم%20بهذه%20الخدمة" class="btn btn-main btn-lg mt-4">
+                <a href="https://wa.me/970569040508?text=مرحبا%20أنا%20مهتم%20بهذه%20الخدمة" class="btn btn-whatsapp btn-lg mt-4">
                     اطلب الآن
                 </a>
             </div>
@@ -146,14 +162,15 @@
                     <h4>تواصل معنا</h4>
                     <p>
                         <strong>واتسآب:</strong> <a href="https://wa.me/970569040508">+970 569 040 508</a><br>
-                        <strong>البريد:</strong> <a href="mailto:info@yad.ps">info@yad.ps</a>
+                        <strong>إنستغرام:</strong> <a href="https://instagram.com/yad.services">@yad.services</a><br>
+                        <strong>البريد:</strong> <a href="mailto:yad.educational@gmail.com">yad.educational@gmail.com</a>
                     </p>
                 </div>
 
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2024 YAD Services. جميع الحقوق محفوظة.</p>
+                <p>&copy; 2026 YAD Services. جميع الحقوق محفوظة.</p>
             </div>
 
         </div>
