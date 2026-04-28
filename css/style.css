@@ -35,6 +35,11 @@ body {
     text-align: right;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -201,6 +206,11 @@ a {
     .hero-buttons .btn {
         width: 100%;
         margin-bottom: 10px;
+        min-height: 44px;
+    }
+    .btn-main,
+    .btn-secondary {
+        min-height: 44px;
     }
 }
 
@@ -1301,5 +1311,28 @@ footer {
         bottom: 20px;
         left: 20px;
         font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 20px;
+    }
+    .hero p {
+        font-size: 14px;
+    }
+    .service-card {
+        padding: 20px;
+    }
+    .btn-main,
+    .btn-secondary {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+    section {
+        padding: 40px 0;
+    }
+    .hero {
+        padding: 40px 15px;
     }
 }
