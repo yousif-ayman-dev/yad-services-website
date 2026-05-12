@@ -1014,7 +1014,7 @@ footer {
 }
 
 .footer-col ul li a:hover {
-    color: var(--accent-color);
+    color: #d6b693;
     padding-right: 8px;
 }
 
