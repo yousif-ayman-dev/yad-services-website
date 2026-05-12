@@ -71,14 +71,19 @@ const observerOptions = {
 const observer = new IntersectionObserver(function(entries) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.style.animation = 'fadeIn 0.6s ease forwards';
+            entry.target.classList.add('visible');
             observer.unobserve(entry.target);
         }
     });
 }, observerOptions);
 
 // Observe cards and sections
-document.querySelectorAll('.service-card, .portfolio-card, .testimonial-card, .step-card, .why-us-card').forEach(el => {
+const scrollTargets = document.querySelectorAll(
+    '.service-card, .portfolio-card, .testimonial-card, .step-card, .why-us-card, .trust-card, .feedback-card, .contact-info-item, .service-detail-card, .hero-content, .hero-image, .cta-content, .about-text, .about-image, .special-section, .faq-item, .service-details-hero'
+);
+
+scrollTargets.forEach(el => {
+    el.classList.add('animate-on-scroll');
     observer.observe(el);
 });
 
