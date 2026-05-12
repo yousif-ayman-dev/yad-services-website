@@ -1030,6 +1030,136 @@ footer {
     text-align: center;
     color: rgba(255, 255, 255, 0.7);
     font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.developer-footer-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #d6b693;
+    color: #102a31;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 8px 20px;
+    border-radius: 999px;
+    transition: var(--transition);
+}
+
+.developer-footer-btn:hover {
+    background: #c9a87e;
+    color: #102a31;
+    transform: translateY(-2px);
+}
+
+.developer-section {
+    padding: 50px 0;
+    background: var(--surface-alt);
+}
+
+.developer-card {
+    background: #f5ede0;
+    border: 1px solid rgba(214, 182, 147, 0.4);
+    border-radius: 20px;
+    padding: 30px 40px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    max-width: 700px;
+    margin: 0 auto;
+    box-shadow: 0 8px 24px rgba(214, 182, 147, 0.2);
+}
+
+.developer-card-icon {
+    width: 64px;
+    height: 64px;
+    min-width: 64px;
+    background: #d6b693;
+    border-radius: 16px;
+    display: grid;
+    place-items: center;
+    font-size: 26px;
+    color: #102a31;
+}
+
+.developer-card-text {
+    flex: 1;
+    text-align: right;
+}
+
+.developer-card-text h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #102a31;
+    margin-bottom: 6px;
+}
+
+.developer-card-text p {
+    font-size: 14px;
+    color: #0f4c5c;
+    margin: 0;
+}
+
+.developer-btn {
+    background: #0ea7b5;
+    color: #ffffff !important;
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-weight: 700;
+    font-size: 14px;
+    white-space: nowrap;
+    transition: var(--transition);
+    border: 2px solid #0ea7b5;
+}
+
+.developer-btn:hover {
+    background: transparent;
+    color: #0ea7b5 !important;
+    transform: translateY(-2px);
+}
+
+.developer-info-item {
+    background: #f5ede0 !important;
+    border: 1px solid rgba(214, 182, 147, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.developer-info-item h4 {
+    color: #102a31 !important;
+}
+
+.developer-info-item p {
+    color: #0f4c5c !important;
+}
+
+.developer-info-item a {
+    color: #0f4c5c !important;
+    font-weight: 700;
+}
+
+.developer-info-item a:hover {
+    color: #d6b693 !important;
+}
+
+@media (max-width: 576px) {
+    .developer-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 24px 20px;
+    }
+    .developer-card-text {
+        text-align: center;
+    }
+    .developer-btn {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 
