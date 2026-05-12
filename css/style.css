@@ -776,6 +776,21 @@ a {
     transition: var(--transition);
 }
 
+.feedback-card .btn {
+    margin: 6px;
+}
+
+@media (max-width: 576px) {
+    .feedback-card {
+        padding: 24px 16px;
+    }
+    .feedback-card .btn {
+        display: block;
+        width: 100%;
+        margin: 8px 0;
+    }
+}
+
 .feedback-card:hover,
 .feedback-card:focus-within {
     box-shadow: var(--shadow-sm);
@@ -1771,6 +1786,25 @@ footer {
         bottom: 20px;
         left: 20px;
         font-size: 24px;
+    }
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    section {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .trust-section,
+    .how-it-works,
+    .services-section,
+    .feedback-section,
+    .testimonials-section {
+        padding: 50px 0;
+    }
+    .footer-top {
+        grid-template-columns: 1fr;
+        gap: 24px;
     }
 }
 
