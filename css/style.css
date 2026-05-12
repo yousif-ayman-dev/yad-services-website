@@ -65,6 +65,123 @@
     --hover-beige-strong: rgba(214, 182, 147, 0.24);
 }
 
+[data-theme="dark"] .developer-card {
+    background: #1a3a47;
+    border-color: rgba(214, 182, 147, 0.25);
+}
+
+[data-theme="dark"] .developer-card-text h4 {
+    color: #d6b693;
+}
+
+[data-theme="dark"] .developer-card-text p {
+    color: #93b8c7;
+}
+
+[data-theme="dark"] .developer-section {
+    background: #0b1f2b;
+}
+
+[data-theme="dark"] .developer-info-item {
+    background: #1a3a47 !important;
+    border-color: rgba(214, 182, 147, 0.25);
+}
+
+[data-theme="dark"] .developer-info-item h4 {
+    color: #d6b693 !important;
+}
+
+[data-theme="dark"] .developer-info-item p {
+    color: #93b8c7 !important;
+}
+
+[data-theme="dark"] .feedback-card {
+    background: #0f2834;
+    border-color: rgba(81, 153, 170, 0.24);
+}
+
+[data-theme="dark"] .feedback-card h2 {
+    color: #e6f7ff;
+}
+
+[data-theme="dark"] .service-card {
+    background: #0f2834;
+    border-color: rgba(81, 153, 170, 0.24);
+}
+
+[data-theme="dark"] .service-card h3 {
+    color: #e6f7ff;
+}
+
+[data-theme="dark"] .faq-item {
+    background: #0f2834;
+}
+
+[data-theme="dark"] .faq-item .accordion-button {
+    color: #e6f7ff;
+    background: #0f2834;
+}
+
+[data-theme="dark"] .contact-info-item {
+    background: #0f2834;
+}
+
+[data-theme="dark"] .contact-method {
+    background: #0f2834;
+}
+
+[data-theme="dark"] .contact-method h3 {
+    color: #e6f7ff;
+}
+
+[data-theme="dark"] .about-text h2,
+[data-theme="dark"] .why-us-card h3,
+[data-theme="dark"] .portfolio-category h2,
+[data-theme="dark"] .section-title {
+    color: #2bbbad;
+}
+
+[data-theme="dark"] .why-us {
+    background: #07121b;
+}
+
+[data-theme="dark"] .portfolio-card.placeholder {
+    background: #0f2834;
+    border-color: rgba(214, 182, 147, 0.25);
+}
+
+[data-theme="dark"] .portfolio-placeholder h3 {
+    color: #e6f7ff;
+}
+
+[data-theme="dark"] .step-card h3 {
+    color: #e6f7ff;
+}
+
+[data-theme="dark"] .breadcrumb {
+    background: #0b1f2b;
+}
+
+[data-theme="dark"] .service-detail-card {
+    background: #0f2834;
+}
+
+[data-theme="dark"] .service-detail-card-body h3 {
+    color: #e6f7ff;
+}
+
+[data-theme="dark"] .service-details-content {
+    background: #0b1f2b;
+}
+
+[data-theme="dark"] .details-section h2 {
+    color: #2bbbad;
+}
+
+[data-theme="dark"] footer {
+    background: #05232d;
+}
+
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
