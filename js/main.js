@@ -11,7 +11,9 @@ console.log("YAD Services Ready 🔥");
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
+
         const target = document.querySelector(this.getAttribute('href'));
+
         if (target) {
             target.scrollIntoView({
                 behavior: 'smooth',
@@ -26,38 +28,68 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // ================================
 
 function setActiveNavLink() {
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+    const currentPage =
+        window.location.pathname.split('/').pop() || 'index.html';
+
     const navLinks = document.querySelectorAll('.nav-link');
 
     navLinks.forEach(link => {
+
         link.classList.remove('active');
+
         if (link.getAttribute('href') === currentPage) {
             link.classList.add('active');
         }
+
     });
+
 }
 
 setActiveNavLink();
 
-const themeToggles = document.querySelectorAll('.btn-theme-toggle');
-const savedTheme = localStorage.getItem('yadTheme') || 'light';
+// ================================
+// DARK MODE
+// ================================
+
+const themeToggles =
+    document.querySelectorAll('.btn-theme-toggle');
 
 function applyTheme(theme) {
-    document.documentElement.setAttribute('data-theme', theme);
-    themeToggles.forEach(toggle => {
-        toggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+
+    document.body.classList.toggle(
+        'dark-mode',
+        theme === 'dark'
+    );
+
+    document.documentElement.style.colorScheme =
+        theme === 'dark' ? 'dark' : 'light';
+
+    themeToggles.forEach(function(toggle) {
+
+        toggle.textContent =
+            theme === 'dark' ? '☀️' : '🌙';
+
     });
+
+    localStorage.setItem('yadTheme', theme);
+
 }
 
-themeToggles.forEach(toggle => {
-    toggle.addEventListener('click', () => {
-        const current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-        applyTheme(current);
-        localStorage.setItem('yadTheme', current);
+themeToggles.forEach(function(toggle) {
+
+    toggle.addEventListener('click', function() {
+
+        const isDark =
+            document.body.classList.contains('dark-mode');
+
+        applyTheme(isDark ? 'light' : 'dark');
+
     });
+
 });
 
-applyTheme(savedTheme);
+applyTheme(localStorage.getItem('yadTheme') || 'light');
 
 // ================================
 // SCROLL ANIMATIONS
@@ -69,67 +101,78 @@ const observerOptions = {
 };
 
 const observer = new IntersectionObserver(function(entries) {
+
     entries.forEach(entry => {
+
         if (entry.isIntersecting) {
+
             entry.target.classList.add('visible');
+
             observer.unobserve(entry.target);
+
         }
+
     });
+
 }, observerOptions);
 
-// Observe cards and sections
+// ================================
+// OBSERVE ELEMENTS
+// ================================
+
 const scrollTargets = document.querySelectorAll(
-    '.service-card, .portfolio-card, .testimonial-card, .step-card, .why-us-card, .trust-card, .feedback-card, .contact-info-item, .service-detail-card, .hero-content, .hero-image, .cta-content, .about-text, .about-image, .special-section, .faq-item, .service-details-hero'
+    '.service-card, .portfolio-card, .testimonial-card, .step-card, .why-us-card, .trust-card, .feedback-card, .contact-info-item, .service-detail-card, .hero-content, .hero-image, .cta-content, .about-text, .about-image, .faq-item, .details-section'
 );
 
 scrollTargets.forEach(el => {
+
     el.classList.add('animate-on-scroll');
+
     observer.observe(el);
+
 });
 
 // ================================
-// HOVER EFFECTS
+// BACK TO TOP BUTTON
 // ================================
 
-document.querySelectorAll('.service-card, .portfolio-card, .testimonial-card').forEach(card => {
-    card.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-10px)';
-    });
+const backToTopBtn =
+    document.createElement('button');
 
-    card.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateY(0)';
-    });
+backToTopBtn.innerHTML =
+    '<i class="fas fa-arrow-up"></i>';
+
+backToTopBtn.className =
+    'back-to-top-btn';
+
+backToTopBtn.setAttribute(
+    'aria-label',
+    'العودة للأعلى'
+);
+
+document.body.appendChild(backToTopBtn);
+
+window.addEventListener('scroll', () => {
+
+    if (window.scrollY > 300) {
+
+        backToTopBtn.classList.add('show');
+
+    } else {
+
+        backToTopBtn.classList.remove('show');
+
+    }
+
 });
 
-// ================================
-// COUNTER ANIMATION
-// ================================
+backToTopBtn.addEventListener('click', () => {
 
-function animateCounters() {
-    const counters = document.querySelectorAll('.counter');
-
-    counters.forEach(counter => {
-        const target = parseInt(counter.textContent);
-        const increment = target / 50;
-        let current = 0;
-
-        const updateCounter = () => {
-            current += increment;
-            if (current < target) {
-                counter.textContent = Math.ceil(current);
-                requestAnimationFrame(updateCounter);
-            } else {
-                counter.textContent = target;
-            }
-        };
-
-        updateCounter();
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
     });
-}
 
-// Call counter animation when page loads
-window.addEventListener('load', () => {
-    setTimeout(animateCounters, 500);
 });
 
 // ================================
@@ -137,134 +180,176 @@ window.addEventListener('load', () => {
 // ================================
 
 function getServiceDetails() {
-    const params = new URLSearchParams(window.location.search);
+
+    const params =
+        new URLSearchParams(window.location.search);
+
     const service = params.get('service');
 
     const services = {
-        'graduation': {
+
+        graduation: {
+
             title: 'مشاريع التخرج',
-            subtitle: 'مشاريع تخرج احترافية ومبتكرة',
-            description: 'نقدم خدمات إنجاز مشاريع التخرج الجامعية في جميع التخصصات بمعايير عالية الجودة وأحدث التقنيات. نساعدك في إنجاز مشروعك بطريقة احترافية تضمن الحصول على أعلى الدرجات.',
-            icon: '🎓'
+
+            subtitle: 'مشاريع تخرج احترافية ومتكاملة',
+
+            description: 'نقدم خدمة تنفيذ مشاريع التخرج بشكل احترافي يشمل البرمجة، كتابة التوثيق، تصميم الواجهات، وتجهيز العرض النهائي بما يتوافق مع متطلبات الجامعة.',
+
+            features: [
+                'تنفيذ المشروع كاملاً من البداية حتى التسليم',
+                'تصميم واجهات حديثة وسهلة الاستخدام',
+                'توثيق أكاديمي منظم واحترافي',
+                'تعديلات ومتابعة مستمرة',
+                'تسليم مرتب وفي الموعد المتفق عليه'
+            ]
+
         },
-        'assignments': {
+
+        assignments: {
+
             title: 'الواجبات والتكاليف',
-            subtitle: 'حل جميع الواجبات والأنشطة الدراسية',
-            description: 'نساعدك في إنجاز جميع الواجبات والأنشطة الدراسية بدقة عالية وفي الوقت المحدد. نقدم حلول شاملة ومفصلة لجميع المواد والمستويات الدراسية مع شرح مفصل لكل خطوة.',
-            icon: '📝'
+
+            subtitle: 'حل واجبات وتكاليف جامعية بدقة',
+
+            description: 'نوفر خدمة حل الواجبات والتكاليف الجامعية بطريقة مرتبة ودقيقة مع مراعاة التنسيق الأكاديمي ومتطلبات المادة.',
+
+            features: [
+                'حلول دقيقة ومنظمة',
+                'تنسيق أكاديمي احترافي',
+                'شرح واضح عند الطلب',
+                'سرعة بالتنفيذ والتسليم',
+                'متابعة وتعديلات حسب الحاجة'
+            ]
+
         },
-        'exams': {
+
+        exams: {
+
             title: 'حل الامتحانات',
-            subtitle: 'حل جميع أنواع الامتحانات والاختبارات',
-            description: 'نقدم خدمات حل الامتحانات والاختبارات في جميع المواد والتخصصات. نحل الامتحانات بدقة عالية سواء كانت نظرية أو عملية ونضمن لك النجاح والحصول على أعلى الدرجات.',
-            icon: '📋'
+
+            subtitle: 'حل امتحانات واختبارات أونلاين',
+
+            description: 'خدمة مخصصة لمساعدة الطلاب في الامتحانات والاختبارات الإلكترونية بسرعة واحترافية مع الالتزام بالوقت المطلوب.',
+
+            features: [
+                'التزام كامل بوقت الامتحان',
+                'سرية وخصوصية عالية',
+                'دقة في الإجابات والحلول',
+                'متابعة مباشرة أثناء الاختبار',
+                'تنفيذ سريع واحترافي'
+            ]
+
         },
-        'reports': {
+
+        reports: {
+
             title: 'التقارير والبحوث',
+
             subtitle: 'تقارير وبحوث أكاديمية احترافية',
-            description: 'نكتب لك التقارير والبحوث الأكاديمية بأعلى مستويات الجودة والدقة. نقدم محتوى أصلي ومفصل مع الاستشهادات والمراجع العلمية المناسبة وتنسيق احترافي.',
-            icon: '📄'
+
+            description: 'نقوم بإعداد التقارير والبحوث الأكاديمية بصياغة منظمة ومحتوى احترافي مع الالتزام بالتوثيق العلمي المطلوب.',
+
+            features: [
+                'كتابة محتوى أصلي ومنظم',
+                'توثيق أكاديمي حسب المطلوب',
+                'تنسيق احترافي وجاهز للطباعة',
+                'مراجعة لغوية وتقنية',
+                'تسليم بصيغ متعددة حسب الطلب'
+            ]
+
         },
-        'cv': {
-            title: 'إنشاء السيرة الذاتية',
-            subtitle: 'سير ذاتية احترافية وجذابة',
-            description: 'نصمم لك سيرة ذاتية احترافية وجذابة تساعدك في الحصول على فرص العمل المرغوبة. نركز على إبراز نقاط القوة وجعل سيرتك مميزة عن غيرها وموافقة لمعايير التوظيف الدولية.',
-            icon: '👔'
+
+        cv: {
+
+            title: 'السيرة الذاتية',
+
+            subtitle: 'تصميم سيرة ذاتية احترافية',
+
+            description: 'نساعدك في إنشاء سيرة ذاتية احترافية بتصميم عصري يبرز خبراتك ومهاراتك بطريقة جذابة.',
+
+            features: [
+                'تصميم حديث وجذاب',
+                'تنسيق متوافق مع ATS',
+                'إبراز المهارات والخبرات',
+                'إمكانية التعديل مستقبلاً',
+                'تسليم PDF ونسخة قابلة للتعديل'
+            ]
+
         },
-        'websites': {
+
+        websites: {
+
             title: 'تصميم المواقع',
-            subtitle: 'مواقع إلكترونية احترافية ومتجاوبة',
-            description: 'نطور لك مواقع إلكترونية احترافية ومتجاوبة مع جميع الأجهزة والشاشات. نقدم تصاميم عصرية ووظائف متقدمة تضمن تجربة مستخدم ممتازة وسهولة الاستخدام.',
-            icon: '💻'
+
+            subtitle: 'تصميم وتطوير مواقع إلكترونية',
+
+            description: 'نصمم مواقع إلكترونية حديثة ومتجاوبة تناسب مختلف الأجهزة مع الاهتمام بسرعة الأداء وتجربة المستخدم.',
+
+            features: [
+                'تصميم متجاوب مع جميع الأجهزة',
+                'واجهة استخدام عصرية وسلسة',
+                'سرعة وأداء ممتاز',
+                'دعم الوضع الليلي',
+                'تحسين تجربة المستخدم'
+            ]
+
         },
-        'office': {
+
+        office: {
+
             title: 'أعمال المكتب',
-            subtitle: 'خدمات إدخال البيانات ومهام أوفيس',
-            description: 'نقدم خدمات إدخال البيانات بدقة عالية ومعالجة جميع مهام Microsoft Office (Word, Excel, PowerPoint). نساعدك في تنظيم ومعالجة بياناتك بطريقة احترافية وسريعة.',
-            icon: '📊'
+
+            subtitle: 'خدمات Word و Excel و PowerPoint',
+
+            description: 'نقدم خدمات مكتبية احترافية تشمل تنسيق الملفات وإعداد العروض التقديمية وإدخال البيانات.',
+
+            features: [
+                'تنسيق ملفات احترافي',
+                'إعداد عروض PowerPoint جذابة',
+                'تنظيم بيانات Excel بدقة',
+                'تسليم سريع ومرتب',
+                'تعديلات حسب الطلب'
+            ]
+
         }
+
     };
 
-    if (service && services[service]) {
-        const serviceData = services[service];
-        document.getElementById('serviceTitle').textContent = serviceData.title;
-        document.getElementById('serviceSubtitle').textContent = serviceData.subtitle;
-        document.getElementById('serviceDescription').textContent = serviceData.description;
+    if (services[service]) {
+
+        const data = services[service];
+
+        document.getElementById('serviceTitle').textContent =
+            data.title;
+
+        document.getElementById('serviceSubtitle').textContent =
+            data.subtitle;
+
+        document.getElementById('serviceDescription').textContent =
+            data.description;
+
+        data.features.forEach((feature, index) => {
+
+            const el =
+                document.getElementById(`feature${index + 1}`);
+
+            if (el) {
+                el.textContent = feature;
+            }
+
+        });
+
     }
+
 }
 
-// Call service details function on page load
-if (window.location.pathname.includes('service-details')) {
-    window.addEventListener('load', getServiceDetails);
-}
+if (
+    window.location.pathname.includes(
+        'service-details.html'
+    )
+) {
 
-// ================================
-// FORM VALIDATION (if forms are added)
-// ================================
+    getServiceDetails();
 
-const forms = document.querySelectorAll('form');
-
-forms.forEach(form => {
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-
-        // Basic validation
-        const inputs = this.querySelectorAll('input[required], textarea[required]');
-        let isValid = true;
-
-        inputs.forEach(input => {
-            if (input.value.trim() === '') {
-                input.style.borderColor = '#e74c3c';
-                isValid = false;
-            } else {
-                input.style.borderColor = '#ddd';
-            }
-        });
-
-        if (isValid) {
-            alert('شكراً! سيتم التواصل معك قريباً');
-            this.reset();
-        }
-    });
-});
-
-// ================================
-// WHATSAPP INTEGRATION
-// ================================
-
-document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
-    link.addEventListener('click', function(e) {
-        // Optional: Add analytics here
-        console.log('User clicked WhatsApp link');
-    });
-});
-
-// ================================
-// PAGE LOAD COMPLETE
-// ================================
-
-window.addEventListener('load', () => {
-    console.log('YAD Services fully loaded');
-    document.body.style.opacity = '1';
-});
-
-// ================================
-// LAZY LOADING FOR IMAGES
-// ================================
-
-if ('IntersectionObserver' in window) {
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.dataset.src || img.src;
-                img.classList.add('loaded');
-                observer.unobserve(img);
-            }
-        });
-    });
-
-    document.querySelectorAll('img[data-src]').forEach(img => {
-        imageObserver.observe(img);
-    });
 }

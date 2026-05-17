@@ -3,192 +3,314 @@
 
 <head>
     <meta charset="UTF-8">
+
+    <script>
+        document.documentElement.setAttribute('data-theme', localStorage.getItem('yadTheme') || 'light');
+    </script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta name="description" content="تفاصيل خدمات YAD">
+
     <title>تفاصيل الخدمة - YAD Services</title>
 
     <link rel="icon" href="assets/icons/favicon.ico">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
 
+    <script>
+        if (localStorage.getItem('yadTheme') === 'dark') {
+            document.body.classList.add('dark-mode');
+        }
+    </script>
+
     <!-- NAVBAR -->
+
     <nav class="navbar navbar-expand-lg">
+
         <div class="container">
 
             <a class="navbar-brand" href="index.html">
                 <img src="assets/images/logo.png" alt="YAD Logo">
             </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="فتح قائمة التنقل">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
                 ☰
             </button>
 
             <div class="collapse navbar-collapse justify-content-center" id="navMenu">
+
                 <ul class="navbar-nav gap-2 gap-lg-4">
-                    <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services.html">الخدمات</a></li>
-                    <li class="nav-item"><a class="nav-link" href="portfolio.html">أعمالنا</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">عن الشركة</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">الرئيسية</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">الخدمات</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="portfolio.html">أعمالنا</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">عن الشركة</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">تواصل معنا</a>
+                    </li>
+
                 </ul>
+
                 <div class="d-lg-none nav-mobile-actions mt-4">
-                    <button class="btn btn-theme-toggle w-100" type="button" aria-label="تبديل الوضع">🌙</button>
-                    <a href="https://wa.me/970569040508?text=مرحبا%20أنا%20مهتم%20بهذه%20الخدمة" class="btn btn-whatsapp w-100">اطلب الآن</a>
+
+                    <button class="btn btn-theme-toggle w-100" type="button">
+                        🌙
+                    </button>
+
+                    <a href="https://wa.me/972569040508?text=مرحبا%20أنا%20مهتم%20بخدماتكم" class="btn btn-whatsapp w-100">
+                        اطلب الآن
+                    </a>
+
                 </div>
+
             </div>
 
             <div class="nav-actions">
-                <button class="btn btn-theme-toggle d-none d-lg-inline-flex" type="button" aria-label="تبديل الوضع">🌙</button>
-                <a href="https://wa.me/970569040508?text=مرحبا%20أنا%20مهتم%20بهذه%20الخدمة" class="btn btn-whatsapp d-none d-lg-inline-flex">اطلب الآن</a>
+
+                <button class="btn btn-theme-toggle d-none d-lg-inline-flex" type="button">
+                    🌙
+                </button>
+
+                <a href="https://wa.me/972569040508?text=مرحبا%20أنا%20مهتم%20بخدماتكم" class="btn btn-whatsapp d-none d-lg-inline-flex">
+                    اطلب الآن
+                </a>
+
             </div>
 
         </div>
+
     </nav>
 
-    <!-- SERVICE HERO -->
+    <!-- HERO -->
+
     <section class="service-details-hero">
-        <div class="container">
-            <h1 id="serviceTitle">تفاصيل الخدمة</h1>
-            <p id="serviceSubtitle">الحصول على خدمة احترافية وعالية الجودة</p>
+
+        <div class="container text-center">
+
+            <h1 id="serviceTitle">
+                تفاصيل الخدمة
+            </h1>
+
+            <p id="serviceSubtitle">
+                خدمة احترافية بجودة عالية
+            </p>
+
         </div>
+
     </section>
 
-    <!-- SERVICE DETAILS CONTENT -->
+    <!-- CONTENT -->
+
     <section class="service-details-content">
+
         <div class="container">
 
             <!-- DESCRIPTION -->
+
             <div class="details-section">
-                <h2>نبذة عن الخدمة</h2>
+
+                <h2>
+                    نبذة عن الخدمة
+                </h2>
+
                 <p id="serviceDescription" class="lead">
-                    نقدم لك خدمة احترافية ومصممة بعناية لتلبية متطلباتك الأكاديمية والمهنية بدقة وجودة عالية.
+                    نقدم لك خدمة احترافية مصممة بعناية لتناسب احتياجاتك الأكاديمية والمهنية.
                 </p>
+
             </div>
 
             <!-- FEATURES -->
+
             <div class="details-section">
-                <h2>المميزات الرئيسية</h2>
+
+                <h2>
+                    مميزات الخدمة
+                </h2>
+
                 <ul class="feature-list">
-                    <li id="feature1">✓ تنفيذ كامل مع مراجعات دقيقة</li>
-                    <li id="feature2">✓ تعديلات مرنة بناءً على ملاحظاتك</li>
-                    <li id="feature3">✓ تواصل سريع ودعم شخصي</li>
-                    <li id="feature4">✓ التزام بالمواعيد وجودة متواصلة</li>
-                    <li id="feature5">✓ أسعار واضحة تناسب احتياجاتك</li>
+
+                    <li id="feature1"></li>
+
+                    <li id="feature2"></li>
+
+                    <li id="feature3"></li>
+
+                    <li id="feature4"></li>
+
+                    <li id="feature5"></li>
+
                 </ul>
+
             </div>
 
             <!-- PRICING -->
-            <div class="details-section">
-                <h2>الأسعار والباقات</h2>
-                <p>
-                    اختر باقة تناسبك أو تواصل معنا لتصميم عرض سعر مخصص حسب نطاق الخدمة ومواعيد التسليم.
-                </p>
-                <a href="https://wa.me/970569040508?text=أنا%20مهتم%20بعرض%20سعر" class="btn btn-whatsapp mt-3">
-                    اطلب عرض سعر
-                </a>
-            </div>
 
-            <!-- PORTFOLIO EXAMPLES -->
             <div class="details-section">
-                <h2>نماذج من أعمالنا</h2>
-                <div class="service-portfolio">
-                    <div class="portfolio-item">
-                        <h3>تصميم تقرير أكاديمي</h3>
-                        <p>تنسيق احترافي ومحتوى مرتب</p>
-                    </div>
-                    <div class="portfolio-item">
-                        <h3>مشروع تخرج عملي</h3>
-                        <p>تسليم كامل مع توثيق وتقارير</p>
-                    </div>
-                    <div class="portfolio-item">
-                        <h3>سيرة ذاتية احترافية</h3>
-                        <p>تصميم جذاب يعزز فرصك</p>
-                    </div>
+
+                <h2>
+                    الأسعار والتفاصيل
+                </h2>
+
+                <p class="lead">
+                    تختلف الأسعار حسب نوع الخدمة، حجم العمل، ومدة التسليم المطلوبة. تواصل معنا عبر واتساب للحصول على التفاصيل الكاملة وعرض سعر مناسب.
+                </p>
+
+                <div class="service-whatsapp-box mt-4">
+
+                    <h3>
+                        جاهز تبدأ؟
+                    </h3>
+
+                    <p>
+                        تواصل معنا الآن واحصل على استشارة مجانية وتفاصيل الخدمة كاملة.
+                    </p>
+
+                    <a href="https://wa.me/972569040508?text=مرحبا%20أريد%20الاستفسار%20عن%20هذه%20الخدمة" class="btn btn-whatsapp">
+
+                        <i class="fab fa-whatsapp"></i> تواصل عبر واتساب
+
+                    </a>
+
                 </div>
+
             </div>
 
             <!-- CTA -->
-            <div class="details-section text-center py-5">
-                <h2>هل أنت مستعد لطلب هذه الخدمة؟</h2>
-                <p class="mt-3 lead">تواصل معنا الآن عبر واتسآب واحصل على استشارة مجانية</p>
-                <a href="https://wa.me/970569040508?text=مرحبا%20أنا%20مهتم%20بهذه%20الخدمة" class="btn btn-whatsapp btn-lg mt-4">
-                    اطلب الآن
+
+            <div class="details-section text-center">
+
+                <h2>
+                    هل أنت مستعد لطلب الخدمة؟
+                </h2>
+
+                <p class="lead mt-3">
+                    فريقنا جاهز لمساعدتك والرد على جميع استفساراتك بسرعة واحترافية.
+                </p>
+
+                <a href="https://wa.me/972569040508?text=مرحبا%20أنا%20مهتم%20بهذه%20الخدمة" class="btn btn-whatsapp btn-lg mt-4">
+
+                    <i class="fab fa-whatsapp"></i> اطلب الآن
+
                 </a>
+
             </div>
 
         </div>
+
     </section>
 
     <!-- FOOTER -->
+
     <footer>
+
         <div class="container">
 
             <div class="footer-top">
 
                 <div class="footer-col">
-                    <h4>عن YAD</h4>
+
+                    <h4>
+                        عن YAD
+                    </h4>
+
                     <p>
                         منصة متخصصة في تقديم خدمات أكاديمية وطلابية عالية الجودة.
                     </p>
+
                 </div>
 
                 <div class="footer-col">
-                    <h4>الخدمات</h4>
+
+                    <h4>
+                        الخدمات
+                    </h4>
+
                     <ul>
-                        <li><a href="services.html">جميع الخدمات</a></li>
-                        <li><a href="services.html">البرمجة</a></li>
-                        <li><a href="services.html">التصميم</a></li>
-                        <li><a href="services.html">المشاريع</a></li>
+
+                        <li>
+                            <a href="services.html">جميع الخدمات</a>
+                        </li>
+
+                        <li>
+                            <a href="services.html">البرمجة</a>
+                        </li>
+
+                        <li>
+                            <a href="services.html">التصميم</a>
+                        </li>
+
                     </ul>
+
                 </div>
 
                 <div class="footer-col">
-                    <h4>روابط سريعة</h4>
-                    <ul>
-                        <li><a href="index.html">الرئيسية</a></li>
-                        <li><a href="services.html">الخدمات</a></li>
-                        <li><a href="portfolio.html">أعمالنا</a></li>
-                        <li><a href="about.html">عن الشركة</a></li>
-                        <li><a href="contact.html">تواصل</a></li>
-                    </ul>
-                </div>
 
-                <div class="footer-col">
-                    <h4>تواصل معنا</h4>
+                    <h4>
+                        تواصل معنا
+                    </h4>
+
                     <p>
-                        <strong>واتسآب:</strong> <a href="https://wa.me/970569040508">+970 569 040 508</a><br>
-                        <strong>إنستغرام:</strong> <a href="https://www.instagram.com/yad.service?igsh=bHN2eTdzdmlxYmIx">@yad.service</a><br>
-                        <strong>البريد:</strong> <a href="mailto:yad.educational@gmail.com">yad.educational@gmail.com</a>
+
+                        <strong>
+                            واتساب:
+                        </strong>
+
+                        <a href="https://wa.me/972569040508">
+                            +972 569 040 508
+                        </a>
+
                     </p>
+
                 </div>
 
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 YAD Services. جميع الحقوق محفوظة.</p>
-                <a href="https://yousif-ayman-dev.github.io/my-portfolio-new/" target="_blank" class="developer-footer-btn">صفحة المطور <i class="fas fa-code"></i></a>
+
+                <p>
+                    &copy; 2026 YAD Services
+                </p>
+
             </div>
 
         </div>
+
     </footer>
 
-    <!-- FLOATING WHATSAPP BUTTON -->
-    <!-- FLOATING WHATSAPP BUTTON -->
-    <a href="https://wa.me/970569040508?text=مرحبا%20YAD" class="whatsapp-btn" title="تحدث معنا على واتسآب">
+    <!-- WHATSAPP BUTTON -->
+
+    <a href="https://wa.me/972569040508?text=مرحبا%20YAD" class="whatsapp-btn" title="تحدث معنا على واتساب">
+
         <i class="fab fa-whatsapp"></i>
+
     </a>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
     <script src="js/main.js"></script>
-
-</body>
-
-</html>
 
 </body>
 

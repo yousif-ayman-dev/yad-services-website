@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 
+</html>
+
 <head>
     <meta charset="UTF-8">
+    <script>
+        document.documentElement.setAttribute('data-theme', localStorage.getItem('yadTheme') || 'light');
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="أعمالنا وأمثلة من المشاريع السابقة">
     <title>أعمالنا - YAD Services</title>
 
     <link rel="icon" href="assets/icons/favicon.ico">
+    <script>
+        document.documentElement.setAttribute('data-theme', localStorage.getItem('yadTheme') || 'light');
+    </script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -15,6 +23,9 @@
 </head>
 
 <body>
+    <script>
+        if (localStorage.getItem('yadTheme') == 'dark') document.body.classList.add('dark-mode');
+    </script>
 
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg">
@@ -38,13 +49,13 @@
                 </ul>
                 <div class="d-lg-none nav-mobile-actions mt-4">
                     <button class="btn btn-theme-toggle w-100" type="button" aria-label="تبديل الوضع">🌙</button>
-                    <a href="https://wa.me/970569040508?text=مرحبا%20أنا%20مهتم%20بخدماتكم" class="btn btn-whatsapp w-100">اطلب الآن</a>
+                    <a href="https://wa.me/972569040508?text=مرحبا%20أنا%20مهتم%20بخدماتكم" class="btn btn-whatsapp w-100">اطلب الآن</a>
                 </div>
             </div>
 
             <div class="nav-actions">
                 <button class="btn btn-theme-toggle d-none d-lg-inline-flex" type="button" aria-label="تبديل الوضع">🌙</button>
-                <a href="https://wa.me/970569040508?text=مرحبا%20أنا%20مهتم%20بخدماتكم" class="btn btn-whatsapp d-none d-lg-inline-flex">اطلب الآن</a>
+                <a href="https://wa.me/972569040508?text=مرحبا%20أنا%20مهتم%20بخدماتكم" class="btn btn-whatsapp d-none d-lg-inline-flex">اطلب الآن</a>
             </div>
 
         </div>
@@ -126,7 +137,7 @@
                     اطلب خدمتك الآن واحصل على جودة مماثلة لمشاريعنا السابقة
                 </p>
 
-                <a href="https://wa.me/970569040508?text=أنا%20مهتم%20بخدماتكم" class="btn btn-whatsapp">
+                <a href="https://wa.me/972569040508?text=أنا%20مهتم%20بخدماتكم" class="btn btn-whatsapp">
                     اطلب الآن
                 </a>
 
@@ -171,7 +182,7 @@
                 <div class="footer-col">
                     <h4>تواصل معنا</h4>
                     <p>
-                        <strong>واتسآب:</strong> <a href="https://wa.me/970569040508">+970 569 040 508</a><br>
+                        <strong>واتسآب:</strong> <a href="https://wa.me/972569040508">+970 569 040 508</a><br>
                         <strong>إنستغرام:</strong> <a href="https://www.instagram.com/yad.service?igsh=bHN2eTdzdmlxYmIx">@yad.service</a><br>
                         <strong>البريد:</strong> <a href="mailto:yad.educational@gmail.com">yad.educational@gmail.com</a>
                     </p>
@@ -189,7 +200,7 @@
 
     <!-- FLOATING WHATSAPP BUTTON -->
     <!-- FLOATING WHATSAPP BUTTON -->
-    <a href="https://wa.me/970569040508?text=مرحبا%20YAD" class="whatsapp-btn" title="تحدث معنا على واتسآب">
+    <a href="https://wa.me/972569040508?text=مرحبا%20YAD" class="whatsapp-btn" title="تحدث معنا على واتسآب">
         <i class="fab fa-whatsapp"></i>
     </a>
 
